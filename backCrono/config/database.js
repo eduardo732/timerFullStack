@@ -1,7 +1,7 @@
 'use strict'
 const { Sequelize } = require('sequelize');
 module.exports = new Sequelize('crono', 'postgres', '1234', {
-    host: 'localhost',
+    host: 'db',
     dialect: 'postgres',
     pool: {
       max: 5,
