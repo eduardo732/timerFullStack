@@ -12,3 +12,10 @@ COPY package*.json ./
 RUN npm install
 
 #Copy app
+COPY FROM https://github.com/eduardo732/timerFullStack
+
+# Expose port to access server
+EXPOSE 4000
+
+# Command to run our app
+CMD [ "npm", "start"]
