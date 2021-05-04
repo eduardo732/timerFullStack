@@ -1,6 +1,6 @@
 'use strict'
 const Port = 4000;
-const app = require('./config/config');
+const app = require('./config/server');
 const db = require('./config/database');
 
 

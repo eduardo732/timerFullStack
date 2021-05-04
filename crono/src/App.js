@@ -57,7 +57,7 @@ const Timer = () => {
 
   async function getTimes(){
     try{
-      let config = {
+      const config = {
         method: 'GET',
         headers: {
           'Accept': 'application/json',
@@ -88,7 +88,7 @@ const Timer = () => {
       </div>
       {times.length > 0 &&
       <div className="timesList">
-        {times.map(time => <div className='row'>{time.id}- {time.minutes}:{time.seconds}</div>)}
+        {times.map(time => <div className='row' key={time.id}>{time.id}- {time.minutes}:{time.seconds}</div>)}
       </div>
       }
    </div>

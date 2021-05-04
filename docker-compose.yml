@@ -21,10 +21,13 @@ services:
       - db
   # Create database container
   db:
-    image: postgres:13.2-alpine
+    image: postgres:11-alpine
     ports:
-    - "5432:5432"
+      - "5432:5432"
     container_name: database-docker
     restart: always
+    user: postgres
     environment:
       POSTGRES_PASSWORD: 1234
+      POSTGRES_DATABASE: crono
+      POSTGRES_USER: postgres
